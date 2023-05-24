@@ -39,8 +39,9 @@ def prompt(item_name, cost, current_savings):
             print("You have enough money to afford " + item_name)
         else:
             print("You don't have enough money for the " + item_name + " yet.\n" + 
-                  "You still need to save $" + str(total_remaining_cost(current_savings, total_cost)) +".")
-            print("Current Progress: " + str(total_progress(total_cost, current_savings)) + "%.")
+                  "Goal Remaining: " + str(total_remaining_cost(current_savings, total_cost)) +".")
+            print("Total Cost: " + str(total_cost))
+            print("Current Progress: $" + str(current_savings) + " (" + str(total_progress(total_cost, current_savings)) + "%)")
     budget_cond()
 
 prompt(item_name, cost, current_savings)
